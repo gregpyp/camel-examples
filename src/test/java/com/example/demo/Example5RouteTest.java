@@ -17,6 +17,6 @@ public class Example5RouteTest {
     public void contentBasedRouter() throws Exception {
         context.startRoute("example5route");
         Thread.sleep(10000);
-
+        context.stopRoute("example5route");
     }
 }

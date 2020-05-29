@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class Example5Route extends RouteBuilder {
     @Override
     public void configure() {
-        from("file:/tmp/inbox?noop=true").routeId("example5route").autoStartup(false)
+        from("file:/tmp/inbox1?noop=true").routeId("example5route").autoStartup(false)
                 .log("Received file: ${header.CamelFileName}")
                 .to("amqp:incoming.q");
 

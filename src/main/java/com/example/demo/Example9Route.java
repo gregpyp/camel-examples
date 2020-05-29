@@ -8,7 +8,7 @@ public class Example9Route extends RouteBuilder {
 
     @Override
     public void configure() {
-        from("file:/tmp/inbox?noop=true").routeId("example9route").autoStartup(false)
+        from("file:/tmp/inbox3?noop=true").routeId("example9route").autoStartup(false)
                 .log("Received file: ${header.CamelFileName}")
                 .to("amqp:incoming.q");
 

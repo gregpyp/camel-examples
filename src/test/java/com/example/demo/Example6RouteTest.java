@@ -17,6 +17,7 @@ public class Example6RouteTest {
     public void contentBasedRouter_filter() throws Exception {
         context.startRoute("example6route");
         Thread.sleep(10000);
+        context.stopRoute("example6route");
 
     }
 }
