@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 public class Example11Route extends RouteBuilder {
     @Override
     public void configure() {
-        from("direct:example11").routeId("example11")
+        from("direct:example11Route").routeId("example11Route")
                 .split(body().tokenize(" "))
-                    .to("mock:example11route:result")
+                    .to("mock:example11Route:result")
                     ;
     }
 }
